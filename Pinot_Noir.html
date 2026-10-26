@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script rel="stylesheet" src="bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="grt-responsive-menu.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Pinot Noir Resume</title>
+</head>
+<body>
+    <header>
+		<div class="menu-container">
+			<div class="grt-menu-row">
+				<div class="grt-menu-logo">
+					<a href="" class="grt-logo"><img src="Logo.png" alt="not shown"></a>
+				</div>
+				<div class="grt-menu-right">
+				<nav>
+				 <button class="grt-mobile-button" type="button" aria-label="Toggle navigation menu"><span class="line1"></span><span class="line2"></span><span class="line3"></span></button>
+				 <ul class="grt-menu">
+				  <li><a href="index.html">Home</a></li>
+                  <li><a href="Contact.html">Contact</a></li>
+				  <li class="grt-dropdown"><a href="Catalog.html">Catalog</a>
+				   <ul class="grt-dropdown-list">
+				   <li><a href="Zinfandel.html">Zinfandel</a></li>
+				   <li><a href="Pinot_Noir.html">Pinot Noir</a></li>
+				  <li><a href="Sangiovese.html">Sangievese</a></li>
+              <li><a href="Chardonnay.html">Chardonnay</a></li>
+				 </ul>
+				</li>								
+				</ul>
+				</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+   <!--Flexbox aligning children items vertically, and putting them
+   in horizontal center-->
+   <div class="col-12 d-flex flex-column align-items-center">
+    <!--intro paragraph-->
+      <h1>Pinot Noir</h1>
+      <p class="intro col-10">This field is nestled in the bottom of a cool valley with good sun exposure.
+        Previously sold to well known high end producers.</p>
+        <!--Flexbox that puts all available space (justify-content-between) horizontally between
+        children items and adds gap (gap-3)-->
+        <!--Not all columns (col-*) used to allow some space to be put between children items-->
+        <!--full with used by children items until md breakpoint (col-md-*) and beyond-->
+      <div class="d-flex justify-content-between gap-3">
+        <img src="Pinot_Noir.jpeg" alt="Pinot Noir" class="full-image img-fluid p-3 col-md-6">
+        <ul class="p-3 col-md-3">
+            <li>
+                Appelation: Russian River
+            </li>
+            <li>
+                Variety: Pinot Noir Clone 115 (80%) and 777 (20%)
+            </li>
+            <li>
+                Rootstock: SO4
+            </li>
+            <li>
+                Spacing: 8 X 5 / 2.4 Acres
+            </li>
+            <li>
+                Trellising: VSP
+            </li>
+            <li>
+                Pruning: Cane
+            </li>
+            <li>
+                Expected Crop: +/- 7 tons
+            </li>
+        </ul>
+        </div>
+        <!--Toggling button for visibility of collapsible info source information (sourceInfo)-->
+      <button class="btn col-12" type="button" data-bs-toggle="collapse" data-bs-target="#sourceInfo">
+        Info and Image Source <i class="bi bi-caret-down-fill"></i>
+      </button>
+      <div class="collapse col-12" id="sourceInfo">
+        <p>
+           Image and info taken from <a href="https://docs.google.com/document/d/1QsunErLlkRFtawz1azIEObKvZKhIKGCv/edit?usp=sharing&ouid=103423985527765235400&rtpof=true&sd=true">
+           <i>GPV Vineyard Resume</i> by Nick Brodrick</a>
+        </p>
+      </div>
+    </div>
+    <script src="jquery.min.js"></script>
+   <script src="grt-responsive-menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script rel="stylesheet" src="bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="grt-responsive-menu.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Contact</title>
+</head>
+<body>
+   <header>
+		<div class="menu-container">
+			<div class="grt-menu-row">
+				<div class="grt-menu-logo">
+					<a href="" class="grt-logo"><img src="Logo.png" alt="not shown"></a>
+				</div>
+				<div class="grt-menu-right">
+				<nav>
+				 <button class="grt-mobile-button" type="button" aria-label="Toggle navigation menu"><span class="line1"></span><span class="line2"></span><span class="line3"></span></button>
+				 <ul class="grt-menu">
+				  <li><a href="index.html">Home</a></li>
+				  <li class="grt-dropdown"><a href="Catalog.html">Catalog</a>
+				   <ul class="grt-dropdown-list">
+				   <li><a href="Zinfandel.html">Zinfandel</a></li>
+				   <li><a href="Pinot_Noir.html">Pinot Noir</a></li>
+				  <li><a href="Sangiovese.html">Sangievese</a></li>
+              <li><a href="Chardonnay.html">Chardonnay</a></li>
+				 </ul>
+				</li>								
+				</ul>
+				</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+      <h1 style="text-align: center;">Contact Page</h1>
+      <!--Vineyard image (outro-picture), intro/contact info (outro-intro), and credits (credit) shown-->
+      <img src="outro-picture.jpeg" alt="Vineyard" class="img-fluid outro-picture col-12">
+      <!--Togglable tooltip (<a>) embedded in <p> around the words "John Doe" that displays title/text
+      of "Vineyard Manager"-->
+      <p class="outro-intro">We would love to hear from you! <i class="bi bi-emoji-smile"></i> If you like to hear more about our grapes, feel free to contact <a data-bs-toggle="tooltip" data-bs-title="Vineyard Manager">John Doe</a>, either at fake_email@sonic.net or (707)-000-0000. Please hover over name for tooltip.</p>
+      <form class="col-12" action="https://formspree.io/f/mgavrkyk" method="POST" style="padding-left:5rem;">
+         <div class="mb-3">
+         <label class="col-3" for="contact-info" class="form-label">
+            Email:
+         </label>
+         <input type="email" class="form-control" id="contact-info" name="email" placeholder="ex-email@gmail.com" required>
+         </div>
+
+         <div class="mb-3 mx-auto">
+            <label class="col-3" for="comment1" class="form-label">
+               Comments:
+            </label>
+            <textarea class="form-control form-control-lg" id="comment1" name="comment" placeholder="Please leave a comment" required></textarea>
+         </div>
+
+         <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Submit comment</button>
+         </div>
+      </form>
+      <div class="credit col-12">Website created by Melissa Wissman. 
+        Images taken by Melissa Wissman and from <a href="https://docs.google.com/document/d/1QsunErLlkRFtawz1azIEObKvZKhIKGCv/edit?usp=sharing&ouid=103423985527765235400&rtpof=true&sd=true">
+        <i>GPV Vineyard Resume</i> by Nick Brodrick</a>. Website information taken from <a href="https://docs.google.com/document/d/1QsunErLlkRFtawz1azIEObKvZKhIKGCv/edit?usp=sharing&ouid=103423985527765235400&rtpof=true&sd=true">
+        <i>GPV Vineyard Resume</i> by Nick Brodrick</a>
+      </div>
+   <!--Javascript sets variable "tooltipTriggerList" to all variables containing [data-bs-toggle="tooltip"]
+   and maps them to new bootstrap "Tooltip"-->
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    </script>
+    <script src="jquery.min.js"></script>
+   <script src="grt-responsive-menu.js"></script>
+</body>
+</html>

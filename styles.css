@@ -1,0 +1,96 @@
+.banner
+{
+    margin: 0;
+    text-decoration: solid;
+    text-align: center;
+    vertical-align: center;
+}
+
+.company-title
+{
+    font-weight:bold; 
+    color: black;
+}
+
+.intro
+{
+    padding: 1rem 5rem 0rem 5rem;
+    text-align: center;
+    font-size: large;
+    font-weight:normal;
+    color:black;
+}
+
+body
+{
+    margin:0;
+    padding: 0;
+    background-image: url('backgroud.png');
+}
+
+.vineyard-index
+{
+    padding: 1rem;
+}
+
+.full-image
+{
+    height: 50rem;
+}
+
+.outro-picture
+{
+    padding: 3rem 5rem 1rem 5rem;
+}
+
+.outro-intro
+{
+    padding: 1rem 5rem 0rem 5rem;
+    text-align: center;
+    color:black;
+    font-weight:bolder; 
+    font-size:x-large;
+}
+
+.credit
+{
+    padding:0.25rem;
+    color: #6c757d;
+    text-align: center;
+    font-size:medium;
+}
+
+.form-control
+{
+    width:50%;
+}
+
+.navbar
+{
+    background-color: #9AE47F;
+}
+
+.form-label
+{
+    color:black;
+}
+
+.collapse
+{
+    text-align: center;
+}
+
+.navbar-nav .nav-link
+{
+    color:blue;
+}
+
+.btn-primary
+{
+    background-color: green;
+}
+
+.carousel-caption {
+  top: 0;
+  bottom: auto;
+}

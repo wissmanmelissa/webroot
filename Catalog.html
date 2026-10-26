@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script rel="stylesheet" src="bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="grt-responsive-menu.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Vineyard Catalog</title>
+</head>
+<body>
+   <header>
+		<div class="menu-container">
+			<div class="grt-menu-row">
+				<div class="grt-menu-logo">
+					<a href="" class="grt-logo"><img src="Logo.png" alt="not shown"></a>
+				</div>
+				<div class="grt-menu-right">
+				<nav>
+				 <button class="grt-mobile-button" type="button" aria-label="Toggle navigation menu"><span class="line1"></span><span class="line2"></span><span class="line3"></span></button>
+				 <ul class="grt-menu">
+				  <li><a href="index.html">Home</a></li>
+              <li><a href="Contact.html">Contact</a></li>
+				  <li class="grt-dropdown"><a href="Catalog.html">Catalog</a>
+				   <ul class="grt-dropdown-list">
+				   <li><a href="Zinfandel.html">Zinfandel</a></li>
+				   <li><a href="Pinot_Noir.html">Pinot Noir</a></li>
+				  <li><a href="Sangiovese.html">Sangievese</a></li>
+              <li><a href="Chardonnay.html">Chardonnay</a></li>
+				 </ul>
+				</li>								
+				</ul>
+				</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+   <h1 class="text-center">Catalog</h1>
+    <!--intro paragraph-->
+      <p class="intro col-12">We offer Russian River Chardonnay, Dry Creek Valley Zinfandel, Russian River Pinot Noir, and Dry Creek Sangiovese. Please click the captions below to see more information about each type</p>
+      
+      <div id="carouselElem" class="carousel slide">
+      <div class="carousel-inner">
+         <div class="carousel-item active">
+            <img src="Zinfandel.png" alt="slide1" class="d-block w-100">
+            <div class="carousel-caption">
+               <a href="Zinfandel.html" style="text-decoration: none; color:black; font-weight: bolder; font-size: xx-large;">Zinfandel</a>
+            </div>
+         </div>
+         <div class="carousel-item">
+            <img src="Sangiovese.jpeg" alt="slide2" class="d-block w-100">
+            <div class="carousel-caption">
+                <a href="Sangiovese.html" style="text-decoration: none; color:black; font-weight: bolder; font-size: xx-large;">Sangiovese</a>
+            </div>
+         </div>
+         <div class="carousel-item">
+            <img src="Pinot_Noir.jpeg" alt="slide2" class="d-block w-100">
+            <div class="carousel-caption">
+               <a href="Pinot_Noir.html" style="text-decoration: none; color:black; font-weight: bolder; font-size: xx-large;">Pinot Noir</a>
+            </div>
+         </div>
+         <div class="carousel-item">
+            <img src="Chardonnay.jpeg" alt="slide2" class="d-block w-100">
+            <div class="carousel-caption">
+               <a href="Chardonnay.html" style="text-decoration: none; color:black; font-weight: bolder; font-size: xx-large;">Chardonnay</a>
+            </div>
+         </div>
+      </div>
+      <button class="carousel-control-prev" id="prevButton" type="button" style="background-color: black;" aria-label="Previous Slide">
+         <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" id="nextButton" type="button" style="background-color: black;" aria-label="Next slide">
+         <span class="carousel-control-next-icon"></span>
+      </button>
+   </div>
+   <button class="btn col-12" type="button" data-bs-toggle="collapse" data-bs-target="#sourceInfo">
+                Info and Images Source <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="collapse text-center col-12" id="sourceInfo">
+                  <p>
+                  Images taken by Melissa Wissman and from <a href="https://docs.google.com/document/d/1QsunErLlkRFtawz1azIEObKvZKhIKGCv/edit?usp=sharing&ouid=103423985527765235400&rtpof=true&sd=true">
+                  <i>GPV Vineyard Resume</i> by Nick Brodrick.</a>
+                  </p>
+            </div>
+      
+    <script>
+      const carouselElem = document.querySelector('#carouselElem');
+      const carousel = new bootstrap.Carousel(carouselElem);
+
+      const prevButton = document.querySelector('#prevButton');
+      const nextButton = document.querySelector('#nextButton')
+
+      prevButton.addEventListener('click', () => 
+      {
+         carousel.prev();
+      });
+
+      nextButton.addEventListener('click', () =>
+      {
+         carousel.next();
+      });
+   </script>
+   <script src="jquery.min.js"></script>
+   <script src="grt-responsive-menu.js"></script>
+      
+      
+      
+      
+      
+      
+      <!--Row container (row) containing the different catalog items (vineyard-index). Each
+        vineyard item contains image of vineyard (<img>) and link to catalog item (<a>). All catalog
+        items disabled except Zinfandel. Each catalog item takes up entire row until breakpoint
+        md (col-md-6) and beyond, in which they then take up half row-->
+      <!--Row container also contains toggle button (<button>) that controlls collapsing of collapsible
+        source info display (sourceInfo)-->
+      <!--div class="container">
+        <div class="row">
+            <div class="col-md-6 vineyard-index">
+                <a class ="btn btn-primary" href="Zinfandel.html">Dry Creek Zinfandel</a>
+                <img src="Zinfandel.png" alt="Zinfandel" class="img-fluid">
+            </div>
+            <div class="col-md-6 vineyard-index">
+                <a href="#" class="btn btn-primary disabled">Russian River Chardonnay</a>
+                <img src="Filler.png" alt="Chardonnay" class="img-fluid">
+            </div>
+            <div class="col-md-6 vineyard-index">
+                <a href="#" class="btn btn-primary disabled">Dry Creek Sangiovese</a>
+                <img src="Filler.png" alt="Sangiovese" class="img-fluid">
+            </div>
+            <div class="col-md-6 vineyard-index">
+                <a href="#" class="btn btn-primary disabled">Russian River Pinot Noir</a>
+                <img src="Filler.png" alt="Pinot Noir" class="img-fluid">
+            </div>
+            <button class="btn col-12" type="button" data-bs-toggle="collapse" data-bs-target="#sourceInfo">
+                Info and Images Source <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="collapse text-center col-12" id="sourceInfo">
+                  <p>
+                  Images and info taken from <a href="https://docs.google.com/document/d/1QsunErLlkRFtawz1azIEObKvZKhIKGCv/edit?usp=sharing&ouid=103423985527765235400&rtpof=true&sd=true">
+                  <i>GPV Vineyard Resume</i> by Nick Brodrick</a>
+                  </p>
+            </div>
+        </div>
+      </div-->
+</body>
+</html>
